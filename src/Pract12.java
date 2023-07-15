@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Pract12 {
     public static long fibonacci(int n) {
-        if (n <= 0) throw new IllegalArgumentException("Invalid input. n must be a positive integer.");
+        if (n <= 0) throw new IllegalArgumentException("Invalid input n must be a positive integer.");
 
         if (n <= 2) return 1;
 
