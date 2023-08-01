@@ -46,7 +46,7 @@ public class Pract12 {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter the number of BasicJava.BasicJava.test cases to rum the program:-");
+        System.out.println("Enter the number of test cases to rum the program:-");
         int test_num = sc.nextInt(); // BasicJava.BasicJava.test case run times
         for (int i = 0; i < test_num; i++) {
             System.out.println("Enter the desired fibonacci digit's place");

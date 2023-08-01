@@ -13,7 +13,7 @@ public class Pract34 {
 
         //System.out.println(op.get());
         System.out.println(op.isPresent());
-        System.out.println(op.stream().findFirst());
+        //System.out.println(op.stream().findFirst());
         System.out.println(op.orElse("This is another string"));
 
 
