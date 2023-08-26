@@ -7,6 +7,7 @@ public class Pract4 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter a character to check: ");
         char ch = sc.next().charAt(0);  // take input as a single char
+
         if (Character.isUpperCase(ch))
             System.out.println("1"); // if the char is capital case
         else if (Character.isLowerCase(ch))

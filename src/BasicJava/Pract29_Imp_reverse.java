@@ -15,10 +15,10 @@ public class Pract29_Imp_reverse {
 
     }
 
-    public static StringBuffer reverseStringAtSamePlace(String a) {
+    public static StringBuffer reverseStringAtSamePlace(String givenString) {
 
         StringBuffer str = new StringBuffer();
-        String[] b = a.trim().split("\\s");
+        String[] b = givenString.trim().split("\\s");
         for (int i = b.length - 1; i >= 0; i--) {
             str.append(b[i]).append(" ");
         }

@@ -27,15 +27,12 @@ public class Exp3 {
             step += len;              // this is used if step value is negative
 
         int[] temp = new int[step];
-        for (int i = 0; i < step; i++) {
-            temp[i] = a[i];
-        }
+        System.arraycopy(a, 0, temp, 0, step);
         for (int i = step; i < len; i++) {
             a[i - step] = a[i];
         }
-        for (int i = 0; i < step; i++) {
-            a[len - step + i] = temp[i];
-        }
+        System.arraycopy(temp, 0, a, len - step, step);
         return a;
+
     }
 }

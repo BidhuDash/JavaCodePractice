@@ -16,6 +16,12 @@ public class Exp1 {
         for (int i : obj.twoSum1(a, 10)) {
             System.out.print(i+",");
         }
+
+        // implementing singleton class's non static string variable
+        /*Singleton s = Singleton.getInstance();
+        System.out.println(s.s.toUpperCase());
+        System.out.println(s.s.toLowerCase());*/
+        //System.out.println(s.s.toCamelCase());
     }
 
     public int[] twoSum1(int[] num,int target){
