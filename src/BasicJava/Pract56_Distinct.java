@@ -36,6 +36,7 @@ public class Pract56_Distinct {
         System.out.println(lst);
         // this method will give a stream of all distinct value provided in a string[]
         System.out.println(lst.stream().distinct().toList());
+
         String lastestString = lst.stream().distinct().collect(Collectors.joining());
         System.out.println(lastestString);
     }

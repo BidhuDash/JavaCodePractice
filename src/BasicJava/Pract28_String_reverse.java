@@ -36,5 +36,12 @@ public class Pract28_String_reverse {
 //        String name = sc.nextLine();
         System.out.println(reverseUsingStringBuilder(name));
         System.out.println(reverseStringUsingString(name));
+
+        String givenStr = "Independent";
+        char[] intermediate = givenStr.toCharArray();
+        for(int i=intermediate.length-1;i>=0;i--){
+            System.out.print(intermediate[i]+" ");
+        }
+
     }
 }
