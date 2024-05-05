@@ -3,7 +3,7 @@ package BasicJava;
 import java.util.Scanner;
 
 //program to print the highest occurring character in the given string.
-public class Pract23 {
+public class Pract23_HighestOccurringCharacter {
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);

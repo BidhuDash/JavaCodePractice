@@ -8,10 +8,10 @@ public class Pract54_BinarySearch {
 
         //binary search works on sorted array
         int[] sortedarray = Arrays.stream(arr).sorted().toArray();
-        int key = 34;
+        int key = 44;
         int last = arr.length - 1;
-        binarySearch(sortedarray, 0, last, key);
-        //binarySearch2(sortedarray,key);
+        //binarySearch(sortedarray, 0, last, key);
+        binarySearch2(sortedarray,key);
     }
 
 
