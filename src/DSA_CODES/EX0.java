@@ -10,9 +10,9 @@ public class EX0 {
         List<Integer> list = new ArrayList<>(List.of(1, 2, 3, 4, 5, 6, 7, 4));
         // Collections.reverse(list);
         List<Integer> revList = new ArrayList<>();
-
-
         System.out.println(list);
+
+
     }
 
 

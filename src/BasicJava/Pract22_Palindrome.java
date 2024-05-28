@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 // program to check whether the given string is palindrome or not.
 public class Pract22_Palindrome {
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the String:-");

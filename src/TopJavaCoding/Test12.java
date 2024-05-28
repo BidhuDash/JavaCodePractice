@@ -15,16 +15,10 @@ public class Test12 {
                 flag = 1;
                 break;
             }
-
             low++;
             high--;
         }
-
-        if (flag == 0) {
-            return true;
-        } else {
-            return false;
-        }
+        return flag == 0;
     }
 
     public static void main(String[] args) {

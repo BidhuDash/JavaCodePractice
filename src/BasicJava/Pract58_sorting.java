@@ -1,8 +1,7 @@
 package BasicJava;
 
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class Pract58_sorting {
 
@@ -41,18 +40,23 @@ public class Pract58_sorting {
         System.out.println(sortingTechnique2(ab));
 
         List<Employee> emplist = new ArrayList<Employee>();
-        emplist.add(new Employee(1L, "Bidhu", "Dash", 44));
-        emplist.add(new Employee(4L, "Fenniz", "Matt", 13));
-        emplist.add(new Employee(7L, "Jester", "Dominic", 23));
-        emplist.add(new Employee(11L, "Lizo", "Puretto", 29));
-        emplist.add(new Employee(50L, "Bosco", "Locosta", 48));
-        emplist.add(new Employee(22L, "Zebra", "Herb", 11));
+        emplist.add(new Employee(1L, "Bidhu", "Dash", 44,"Mech"));
+        emplist.add(new Employee(4L, "Fenniz", "Matt", 13,"Elec"));
+        emplist.add(new Employee(7L, "Jester", "Dominic", 23,"Elec"));
+        emplist.add(new Employee(11L, "Lizo", "Puretto", 29,"Mech"));
+        emplist.add(new Employee(50L, "Bosco", "Locosta", 48,"Mech"));
+        emplist.add(new Employee(22L, "Zebra", "Herb", 11,"Socio"));
 
-        // sorting technique3 using list.sort(Comparator.comparing())
-        emplist.sort(Comparator.comparing(Employee::getAge));
+        // sorting technique3 using list.sort(Comparator.comparing()) step wise comparator
+        emplist.sort(Comparator.comparing(Employee::getFname).thenComparing(Employee::getLname).thenComparing(Employee::getAge).thenComparing(Employee::getEmpId));
         emplist.forEach(System.out::println);
+        System.out.println("--------------");
 
-       //    emplist.sort(Comparator.comparing());
+
+        //map CourseName as key with list of Employees as value  using dept sorting
+        Map<String, List<Employee>> mapByDept = emplist.stream().collect(Collectors.groupingBy(Employee::getDepartment));
+
+        mapByDept.forEach((x,y)-> System.out.println(x+","+y));
 
     }
 }
@@ -63,13 +67,15 @@ class Employee {
     private String Fname;
     private String Lname;
     private int age;
+    private String Department;
 
-    Employee(Long EmpId, String Fname, String Lname, int age) {
+    Employee(Long EmpId, String Fname, String Lname, int age, String dept) {
         super();
         this.EmpId = EmpId;
         this.Fname = Fname;
         this.Lname = Lname;
         this.age = age;
+        this.Department = dept;
     }
 
     public Long getEmpId() {
@@ -104,8 +110,22 @@ class Employee {
         this.age = age;
     }
 
+    public String getDepartment() {
+        return Department;
+    }
+
+    public void setDepartment(String department) {
+        Department = department;
+    }
+
     @Override
     public String toString() {
-        return "Employee{" + "EmpId=" + EmpId + ", Fname='" + Fname + '\'' + ", Lname='" + Lname + '\'' + ", age=" + age + '}';
+        return "Employee{" +
+                "EmpId=" + EmpId +
+                ", Fname='" + Fname + '\'' +
+                ", Lname='" + Lname + '\'' +
+                ", age=" + age +
+                ", Department='" + Department + '\'' +
+                '}';
     }
 }

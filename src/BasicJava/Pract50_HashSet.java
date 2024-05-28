@@ -66,7 +66,7 @@ public class Pract50_HashSet {
 
     /*->It is an ordered version of hashset that implements the Doubly-LinkedList
      * ->The insertion order is maintained.
-     * ->It accepts null value only once.(as it doesn't kee duplicates)*/
+     * ->It accepts null value only once.(as it doesn't keep duplicates)    */
     public static void impLinkedHashSet() {
         Set<String> set = new LinkedHashSet<>();
 
