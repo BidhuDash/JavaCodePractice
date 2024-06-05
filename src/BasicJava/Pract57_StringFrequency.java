@@ -7,7 +7,9 @@ import java.util.stream.Collectors;
 
 public class Pract57_StringFrequency {
     public static void main(String[] args) {
-        String str = "bidhu dash dash";
+        //String str = "bidhu dash dash";
+
+        String str = "bbbbdddeee";
 
         String[] aa = str.trim().split("");
         List<String> list = List.of(aa);
@@ -16,5 +18,8 @@ public class Pract57_StringFrequency {
         map.forEach((x,y)->{
             System.out.println("Keys: "+x+",values: "+y);
         });
+
+        Integer freq = map.values().stream().max(Integer::compare).orElse(0);
+        System.out.println(freq);
     }
 }

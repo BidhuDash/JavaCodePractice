@@ -1,5 +1,6 @@
 package BasicJava;
 
+import java.sql.SQLOutput;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -53,11 +54,20 @@ public class Pract58_sorting {
         System.out.println("--------------");
 
 
-        //map CourseName as key with list of Employees as value  using dept sorting
+        //map Department as key with list of Employees as value  using dept sorting
         Map<String, List<Employee>> mapByDept = emplist.stream().collect(Collectors.groupingBy(Employee::getDepartment));
 
         mapByDept.forEach((x,y)-> System.out.println(x+","+y));
 
+        //list of emp, id, name ,sal. get name of first 10 employees sorted in ascending order based on salary,
+        //having salary greater than 10,000/-
+
+        List<String> emplist2 = emplist.stream().filter(e->e.getAge()>30)
+                .sorted(Comparator.comparing(Employee::getAge))
+                .limit(10).map(Employee::getFname)
+                .toList();
+
+        System.out.println(emplist2);
     }
 }
 

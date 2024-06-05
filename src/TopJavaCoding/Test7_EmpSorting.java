@@ -2,9 +2,8 @@ package TopJavaCoding;
 
 import java.util.ArrayList;
 
+import java.util.Comparator;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
-import java.util.concurrent.atomic.AtomicReference;
 import java.util.stream.Collectors;
 
 
@@ -13,6 +12,7 @@ class Emp {
     private String Name;
     private int age;
     private Long id;
+    private Double salary;
 
     public String getName() {
         return Name;
@@ -38,22 +38,48 @@ class Emp {
         this.id = id;
     }
 
-    public Emp(String name, int age, Long id) {
+    public Double getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Double salary) {
+        this.salary = salary;
+    }
+
+    public Emp(String name, int age, Long id, Double salary) {
         Name = name;
         this.age = age;
         this.id = id;
+        this.salary = salary;
     }
 
-
+    @Override
+    public String toString() {
+        return "Emp{" +
+                "Name='" + Name + '\'' +
+                ", age=" + age +
+                ", id=" + id +
+                ", salary=" + salary +
+                '}';
+    }
 }
-public class Test7 {
+
+
+
+public class Test7_EmpSorting {
     public static void main(String[] args) {
 
         List<Emp> emp = new ArrayList<>();
-        emp.add(new Emp("Bidhu",26,2L));
-        emp.add(new Emp("Dash",27,3L));
-        emp.add(new Emp("Dash",28,4L));
-        emp.add(new Emp("Dash",29,5L));
+        emp.add(new Emp("Boi",26,2L,201223.44));
+        emp.add(new Emp("Song",27,3L,65623.00));
+        emp.add(new Emp("Lister",28,4L,542332.65));
+        emp.add(new Emp("Dashing",29,5L,23463.54));
+        emp.add(new Emp("Toy",66,8L,7845.58));
+        emp.add(new Emp("Wolf",45,1L,9896.99));
+        emp.add(new Emp("Boat",789,6L,77144.71));
+        emp.add(new Emp("Tin",85,11L,325698.98));
+        emp.add(new Emp("Rubber",76,10L,8923463.45));
+        emp.add(new Emp("Light",999,55L,9923463.78));
 
 
 //        List<Emp> list = emp.stream().filter(x->x.getAge()>27).toList();
@@ -67,8 +93,8 @@ public class Test7 {
 //        });
 
         System.out.println(emp.stream().collect(Collectors.groupingBy(Emp::getName,Collectors.counting())));
-
-//        System.out.println(name);
+       List<String> filter= emp.stream().filter(x->x.getSalary()>40000).sorted(Comparator.comparingDouble(Emp::getSalary)).limit(3).map(Emp::getName).toList();
+        System.out.println(filter);
 //        System.out.println(age);
     }
 

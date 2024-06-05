@@ -1,31 +1,19 @@
 package BasicJava;
 
+import java.util.Map;
 import java.util.Scanner;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 //program to print the highest occurring character in the given string.
 public class Pract23_HighestOccurringCharacter {
     public static void main(String[] args) {
 
-        /*Scanner sc = new Scanner(System.in);
-        String word1 = sc.next();
-        String word = word1.toLowerCase();
-        int max = 0;
-        char result = 'a';
-        int[] count = new int[256];
+        System.out.println(maxOccurringChar("BisterNestaulliulliCostaCullynioampellte"));
 
-        for (int i = 0; i < word.length(); i++) {
-            count[word.charAt(i) - 'a']++;
-        }
-        for (int i = 0; i < 26; i++) {
-            if (count[i] > max) {
-                max = count[i];
-                result = (char) ('a' + i);
-            }
-        }*/
-       // System.out.println(result);
 
-        System.out.println(maxOccurringChar("Sibbbsterrsr"));
-
+        String word = "BisterNestaulliulliCostaCullynioampellte ";
+        maxOccurringChar2(word);
     }
 
     public static char maxOccurringChar(String word) {
@@ -41,5 +29,20 @@ public class Pract23_HighestOccurringCharacter {
             }
         }
         return ans;
+    }
+
+    public static void maxOccurringChar2(String wo){
+        String word = wo.toLowerCase();
+
+        //step =1 create a frequency map using stream api.
+        Map<Character,Long> maxChar = word.chars().filter(ch-> !Character.isWhitespace(ch)).mapToObj(x->(char)x)
+                .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()));
+
+        //step = 2 find the max frequency with stream api.
+        long maxFrequency = maxChar.values().stream().max(Long::compare).orElse(0L);
+
+        //step =3 find the characters with the highest frequency
+        maxChar.entrySet().stream().filter(x->x.getValue()==maxFrequency)
+                .forEach(a-> System.out.println("  Character ("+a.getKey()+") occurs "+ maxFrequency+" times"));
     }
 }
