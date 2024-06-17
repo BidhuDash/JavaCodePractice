@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 
-public class TestClass {
+public class Test1 {
 
     public static void main(String[] args) {
 
