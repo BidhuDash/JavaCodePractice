@@ -29,17 +29,17 @@ public class Exp5 implements Runnable {
     public void Lock() {
         System.out.println(Thread.currentThread().getName());
         //Object level lock
-        synchronized (this) {
-            System.out.println("this is object level lock");
-            System.out.println("in block " + Thread.currentThread().getName());
-            System.out.println("in block " + Thread.currentThread().getName() + " end");
-        }
-
-        //class level lock
-//        synchronized (Exp5.class) {
-//            System.out.println("this is class level lock");
+//        synchronized (this) {
+//            System.out.println("this is object level lock");
 //            System.out.println("in block " + Thread.currentThread().getName());
 //            System.out.println("in block " + Thread.currentThread().getName() + " end");
 //        }
+
+        //class level lock
+        synchronized (Exp5.class) {
+            System.out.println("this is class level lock");
+            System.out.println("in block " + Thread.currentThread().getName());
+            System.out.println("in block " + Thread.currentThread().getName() + " end");
+        }
     }
 }

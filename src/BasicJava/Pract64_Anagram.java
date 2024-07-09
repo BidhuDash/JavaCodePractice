@@ -1,10 +1,9 @@
-package TopJavaCoding;
+package BasicJava;
 
 import java.util.Arrays;
 
-public class Test17_Anagram {
+public class Pract64_Anagram {
     public static void main(String[] args) {
-
         String a = "bra";
         String b = "bar";
 

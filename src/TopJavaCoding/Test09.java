@@ -1,14 +1,12 @@
 package TopJavaCoding;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class Test09 {
 
 
-    List<Integer> list1 = Arrays.asList(1,3,3,4,5,5,6,7,8);
-
-
-
+    List<Integer> list1 = Arrays.asList(1, 3, 3, 4, 5, 5, 6, 7, 8);
 
     public static void main(String[] args) {
 
@@ -21,11 +19,7 @@ public class Test09 {
 //        Map<Integer,Integer> = list.stream(collect(Comparator(x->)))
 //
 
-
-
     }
-
-
 
 }
 

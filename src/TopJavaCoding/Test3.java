@@ -22,6 +22,7 @@ public class Test3 {
             System.out.print(s + " ");
         }
         System.out.println("\n" + aa[4]);
+
         List<String> str2 = List.of(aa);
         Map<String, Integer> map = str2.stream().collect(Collectors.toMap(Function.identity(), x -> 1, Math::addExact));
         map.forEach((x, y) -> {

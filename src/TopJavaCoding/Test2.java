@@ -7,7 +7,6 @@ import java.util.stream.Collectors;
 public class Test2 {
     public static void main(String[] args) {
 
-
         List<Object> list = Arrays.asList(1, 3, 4, 5, "one", "two");
 
         //list.stream()
@@ -16,7 +15,6 @@ public class Test2 {
                     System.out.println(Math.sqrt((Integer) i));
                     return false;
                 }).toList();
-
 
 
        /* String name = "Bidhu";

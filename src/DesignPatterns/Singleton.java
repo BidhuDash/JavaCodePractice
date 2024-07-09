@@ -1,4 +1,4 @@
-package TopJavaCoding;
+package DesignPatterns;
 
 class Singleton {
     private static Singleton singletonInstance;
