@@ -49,5 +49,4 @@ class Singleton {
         System.out.println("a simple static method");
     }
 
-
 }
