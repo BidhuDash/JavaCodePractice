@@ -9,6 +9,8 @@ public class Pract22_Palindrome {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter the String:-");
         String name = sc.next(); //type a word to check whether its palindrome or not
+
+        //logic
         name.toLowerCase();
         int low = 0;
         int high = name.length() - 1;

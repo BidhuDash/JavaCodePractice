@@ -1,4 +1,10 @@
-package DesignPatterns;
+package DesignPatterns.Creational;
+
+/**
+ * @Author Bidhu Dash
+ * @Date
+ * 
+ */
 
 interface Vehicle{
     void drive();
@@ -41,7 +47,7 @@ class BikeFactory extends VehicleFactory{
     }
 }
 
-public class FactoryMethod {
+public class Factory {
     public static void main(String[] args) {
 
         VehicleFactory carFactory = new CarFactory();

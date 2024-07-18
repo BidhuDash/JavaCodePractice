@@ -1,4 +1,4 @@
-package DesignPatterns;
+package DesignPatterns.Creational;
 
 class Singleton {
     private static Singleton singletonInstance;
@@ -49,4 +49,7 @@ class Singleton {
         System.out.println("a simple static method");
     }
 
+    public static void main(String[] args) {
+        Singleton sg = new Singleton();
+    }
 }

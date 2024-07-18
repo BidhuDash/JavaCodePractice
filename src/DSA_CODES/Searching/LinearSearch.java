@@ -1,4 +1,4 @@
-package DSA_CODES;
+package DSA_CODES.Searching;
 
 
 // time complexcity O(n)

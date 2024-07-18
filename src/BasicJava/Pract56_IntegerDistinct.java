@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class Pract56_Distinct {
+public class Pract56_IntegerDistinct {
 
     public static void main(String[] args) {
         String[] a = {"b", "i", "i", "d", "d", "h", "u"};

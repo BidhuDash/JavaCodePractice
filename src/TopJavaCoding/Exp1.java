@@ -12,6 +12,7 @@ public class Exp1 {
     public static void main(String[] args) {
        // int[] a = {0, 3, 7, 5, 9, 6};
         int[] a = {2,5,5,11};
+
         Exp1 obj = new Exp1();
         for (int i : obj.twoSum1(a, 10)) {
             System.out.print(i+",");
