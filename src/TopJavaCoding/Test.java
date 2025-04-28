@@ -5,6 +5,7 @@ public class Test {
         String N = "01";
         StringBuilder CON = new StringBuilder();
         CON.append(N.charAt(0));
+
         int count =0;
         if(N.length()<2){
             throw new IllegalArgumentException("The number of characters should be more than one");
