@@ -1,7 +1,12 @@
 package TopJavaCoding;
 
 import java.util.*;
-
+/**
+ * @Author Bidhu Dash
+ * @Date 16-05-2025
+ *
+ * Basically, this finds the kth index element in the provided list.
+ */
 public class Test18 {
     public static void main(String[] args) {
 
@@ -14,8 +19,8 @@ public class Test18 {
 
         System.out.println(list);
 
-        int thirdLargest = list.stream().sorted((a,b)->b-a).skip(k-1).findFirst()
-                .orElseThrow(()-> new NoSuchElementException("No Such element"));
+        int thirdLargest = list.stream().sorted((a, b) -> b - a).skip(k - 1).findFirst()
+                .orElseThrow(() -> new NoSuchElementException("No Such element"));
 
         System.out.println(thirdLargest);
     }

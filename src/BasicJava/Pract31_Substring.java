@@ -3,6 +3,9 @@ package BasicJava;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class Pract31_Substring {
     public static void main(String[] args) {
@@ -17,6 +20,8 @@ public class Pract31_Substring {
             }
         }
         System.out.println(list);
+
+
 
     }
 }

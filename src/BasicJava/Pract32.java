@@ -2,6 +2,11 @@ package BasicJava;
 
 import java.util.Scanner;
 
+/**
+ * @Author Bidhu Dash
+ * @Date
+ *          Find the area of a retangle
+ */
 class Pract32 {
     int l;
     int b;

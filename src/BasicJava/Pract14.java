@@ -1,5 +1,11 @@
 package BasicJava;
-
+/**
+ * @Author Bidhu Dash
+ * @Date
+ *
+ * PS: - Given an integer, we need to count the number of 1's present in the binary form of
+ *      that integer.
+ */
 public class Pract14 {
     public static void main(String[] args) {
         int number1 = 34; // The integer value to convert

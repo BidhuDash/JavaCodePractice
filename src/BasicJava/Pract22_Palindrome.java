@@ -2,7 +2,12 @@ package BasicJava;
 
 import java.util.Scanner;
 
-// program to check whether the given string is palindrome or not.
+/**
+ * @Author Bidhu Dash
+ * @Date
+ *
+ *  program to check whether the given string is palindrome or not.
+ */
 public class Pract22_Palindrome {
 
     public static void main(String[] args) {

@@ -16,7 +16,7 @@ public class Pract66_UniqueWordString {
     public static void main(String[] args) {
         List<String> sentence = Arrays.asList(
 
-                "Hello", "Bidhu", "what", "Bidhu",
+                "Hello", "Bidhu", "what", "Bidhu", "are",
                 "You", "doing", "doing", "here", "say"
         );
 

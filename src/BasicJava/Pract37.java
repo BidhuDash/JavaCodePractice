@@ -6,7 +6,7 @@ import java.util.List;
 
 //collection framework
 public class Pract37 {
-    /* Collection interface extends iterable interface, whereas  list,queue & set interfaces extends
+    /* Collection interface extends iterable interface, whereas  list,queue and set interfaces extends
         collection interface.
     * */
     public static void main(String[] args) {

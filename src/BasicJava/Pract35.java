@@ -1,11 +1,20 @@
 package BasicJava;
 
+/**
+ * @Author Bidhu Dash
+ * @Date
+ *
+ *
+ * PS: - Understanding of Polymorphism
+ *
+ *
+ */
 public class Pract35 {
     public static void main(String[] args) {
         String a = "this";
         A a1 = new B(a);
         System.out.println("------------------");
-        A a2 = new B(a);  // parent class object reference can hold child class object
+        A a2 = new B(a);  // parent class object reference can hold a child class object
         System.out.println("------------------");
         // BasicJava.BasicJava.B b1 = new BasicJava.BasicJava.B(a);
         Pract32 obj3 = new Pract32();

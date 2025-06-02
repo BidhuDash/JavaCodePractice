@@ -43,5 +43,10 @@ public class Pract28_String_reverse {
             System.out.print(intermediate[i]+" ");
         }
 
+
+        //oneliner string reverse using StringBuilder
+        String newStr = new StringBuilder(givenStr).reverse().toString();
+        System.out.println(newStr);
+
     }
 }

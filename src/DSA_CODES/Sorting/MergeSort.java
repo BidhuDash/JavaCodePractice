@@ -3,7 +3,9 @@ package DSA_CODES.Sorting;
 /**
  * @Author Bidhu Dash
  * @Date 09-07-2024
- * Merge sort is a divide-and-conquer algorithm that splits the array into halves, sorts each half, and merges them back together.
+ *
+ * <p>
+ *     Merge sort is a divide-and-conquer algorithm that splits the array into halves, sorts each half, and merges them back together.
  * <p>
  * Algorithm:
  * Divide the array into two halves.

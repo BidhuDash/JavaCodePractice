@@ -63,7 +63,7 @@ public class SinglyLinkedList {
 
         //assign next of last node to newNode
         endNode.next = newNode;
-    }
+    }   
 
     void insertAtNthPlace(int newData, int position) throws Error {
         // check if the given position is at beginning

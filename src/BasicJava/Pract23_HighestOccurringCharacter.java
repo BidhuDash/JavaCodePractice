@@ -1,16 +1,19 @@
 package BasicJava;
 
 import java.util.Map;
-import java.util.Scanner;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
-//program to print the highest occurring character in the given string.
+/**
+ * @Author Bidhu Dash
+ * @Date
+ *
+ * PS: Program to print the highest occurring character in the given string.
+ */
 public class Pract23_HighestOccurringCharacter {
     public static void main(String[] args) {
 
         System.out.println(maxOccurringChar("BisterNestaulliulliCostaCullynioampellte"));
-
 
         String word = "BisterNestaulliulliCostaCullynioampellte ";
         maxOccurringChar2(word);

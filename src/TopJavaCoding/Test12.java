@@ -6,17 +6,13 @@ import java.util.List;
 
 public class Test12 {
     public static boolean isPalindrome(String str) {
-        int low = 0;
-        int high = str.length() - 1;
-        int flag = 0;
-
+        int low = 0, high = str.length() - 1, flag = 0;
         while (low < high) {
             if (str.charAt(low) != str.charAt(high)) {
                 flag = 1;
                 break;
             }
-            low++;
-            high--;
+            low++; high--;
         }
         return flag == 0;
     }
